@@ -12,6 +12,15 @@ public class OutputView {
     public static final String COMMA = ",";
 
     /**
+     * 에러 출력
+     *
+     * @param e exception
+     */
+    public void error(Exception e) {
+        System.out.println(e.getMessage());
+    }
+
+    /**
      * 결과 출력
      */
     public void resultPrint() {
@@ -19,7 +28,7 @@ public class OutputView {
     }
 
     /**
-     * 각 라운드 결과 출력
+     * 라운드 결과
      *
      * @param car 자동차
      */
@@ -28,19 +37,19 @@ public class OutputView {
     }
 
     /**
-     * 우승자 출력
+     * 우승자
      *
-     * @param winner 우승한 자동차
+     * @param winner 우승 자동차
      */
     public void printWinner(List<Car> winner) {
         System.out.println(WINNER + winnerComma(winner));
     }
 
     /**
-     * 우승자들 일 경우
+     * 우승자 콤마
      *
-     * @param winner 우승 자동차 목록
-     * @return 우승차 목록 콤마 string
+     * @param winner 우승차
+     * @return 자동차 이름 들
      */
     public String winnerComma(List<Car> winner) {
         List<String> list = new ArrayList<>();

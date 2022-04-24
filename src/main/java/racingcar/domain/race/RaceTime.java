@@ -40,4 +40,8 @@ public class RaceTime {
 
         return count;
     }
+
+    public boolean isLast(int index) {
+        return raceTime == index;
+    }
 }
